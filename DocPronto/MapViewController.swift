@@ -9,23 +9,23 @@
 import UIKit
 import GoogleMaps
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet var mapView: GMSMapView!
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        var camera = GMSCameraPosition.cameraWithLatitude(39.952432,longitude: -75.164403, zoom: 15)
-        self.mapView.myLocationEnabled = true
-        self.mapView.camera = camera
+        locationManager.delegate = self
         
-        var marker = GMSMarker()
-        marker.position = CLLocationCoordinate2DMake(39.952432, -75.164403)
-        marker.title = "My location"
-        marker.snippet = "I need a doc pronto"
-        marker.map = mapView
+        if (locationManager.respondsToSelector("requestWhenInUseAuthorization")) {
+            locationManager.requestWhenInUseAuthorization()
+        }
+        else {
+            locationManager.startUpdatingLocation()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +33,35 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - CLLocationManagerDelegate
+    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == .AuthorizedWhenInUse {
+            locationManager.startUpdatingLocation()
+            mapView.myLocationEnabled = true
+            mapView.settings.myLocationButton = true
+        }
+        else if status == .Denied {
+            println("Authorization is not available")
+        }
+        else {
+            println("status unknown")
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        if let location = locations.first as? CLLocation {
+            mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 17, bearing: 0, viewingAngle: 0)
+            locationManager.stopUpdatingLocation()
 
+            var marker = GMSMarker()
+            marker.position = locationManager.location.coordinate
+            marker.title = "My location"
+            marker.snippet = "I need a doc pronto"
+            marker.map = mapView
+        }
+    }
+
+    
     /*
     // MARK: - Navigation
 
