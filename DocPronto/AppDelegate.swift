@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        Parse.setApplicationId("mxzbQxv3lYPBJoOpbnkMDgnDoFFkFuUW6Sm3Of9d",
+            clientKey: "BiJAt5NHyzPlk2agKZ3yzqLE42FnLN1NuSm06Onb")
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+        
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            println("Object has been saved.")
+        }
         return true
     }
 
