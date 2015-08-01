@@ -28,6 +28,8 @@
 		AC7909761B6D516F00085FB6 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7909751B6D516F00085FB6 /* libsqlite3.dylib */; };
 		AC7909781B6D517B00085FB6 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7909771B6D517B00085FB6 /* Accounts.framework */; };
 		AC79097A1B6D517E00085FB6 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7909791B6D517E00085FB6 /* Social.framework */; };
+		AC79097E1B6D549700085FB6 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79097C1B6D549700085FB6 /* Fabric.framework */; };
+		AC79097F1B6D549700085FB6 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79097D1B6D549700085FB6 /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		AC7909751B6D516F00085FB6 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		AC7909771B6D517B00085FB6 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		AC7909791B6D517E00085FB6 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		AC79097C1B6D549700085FB6 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		AC79097D1B6D549700085FB6 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +87,9 @@
 				AC79096C1B6D515500085FB6 /* QuartzCore.framework in Frameworks */,
 				AC79096A1B6D515000085FB6 /* CoreLocation.framework in Frameworks */,
 				AC7909681B6D514C00085FB6 /* CoreGraphics.framework in Frameworks */,
+				AC79097F1B6D549700085FB6 /* Crashlytics.framework in Frameworks */,
 				AC7909661B6D514700085FB6 /* CFNetwork.framework in Frameworks */,
+				AC79097E1B6D549700085FB6 /* Fabric.framework in Frameworks */,
 				AC7909641B6D514200085FB6 /* AudioToolbox.framework in Frameworks */,
 				AC7909621B6D513100085FB6 /* Parse.framework in Frameworks */,
 				AC7909611B6D513100085FB6 /* Bolts.framework in Frameworks */,
@@ -103,6 +109,8 @@
 		AC7909251B6C455F00085FB6 = {
 			isa = PBXGroup;
 			children = (
+				AC79097C1B6D549700085FB6 /* Fabric.framework */,
+				AC79097D1B6D549700085FB6 /* Crashlytics.framework */,
 				AC7909791B6D517E00085FB6 /* Social.framework */,
 				AC7909771B6D517B00085FB6 /* Accounts.framework */,
 				AC7909751B6D516F00085FB6 /* libsqlite3.dylib */,
@@ -181,6 +189,7 @@
 				AC79092A1B6C455F00085FB6 /* Sources */,
 				AC79092B1B6C455F00085FB6 /* Frameworks */,
 				AC79092C1B6C455F00085FB6 /* Resources */,
+				AC79097B1B6D547D00085FB6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -265,6 +274,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC79097B1B6D547D00085FB6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 70160b7dec925a91c6fe09e38bf1f8659c1eda41 0fa711cea5cca0c6a4b57c1a8955f0518514bfdd7a9e6f28b3eca2c60d905a9c\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC79092A1B6C455F00085FB6 /* Sources */ = {
