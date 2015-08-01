@@ -12,6 +12,7 @@ import Parse
 import Bolts
 import Fabric
 import Crashlytics
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         Fabric.with([Crashlytics()])
+        
+        // google maps
+        GMSServices.provideAPIKey("AIzaSyDjj-mmJxrtTSIp7nVgSRi911_LTL8obYY")
         return true
     }
 
