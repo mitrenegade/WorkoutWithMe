@@ -82,7 +82,6 @@
 				AC7909331B6C455F00085FB6 /* AppDelegate.swift */,
 				AC7909381B6C455F00085FB6 /* ViewController.swift */,
 				AC79093A1B6C455F00085FB6 /* Main.storyboard */,
-				AC79093D1B6C455F00085FB6 /* Images.xcassets */,
 				AC79093F1B6C455F00085FB6 /* LaunchScreen.xib */,
 				AC7909351B6C455F00085FB6 /* DocPronto.xcdatamodeld */,
 				AC7909311B6C455F00085FB6 /* Supporting Files */,
@@ -93,6 +92,7 @@
 		AC7909311B6C455F00085FB6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AC79093D1B6C455F00085FB6 /* Images.xcassets */,
 				AC7909321B6C455F00085FB6 /* Info.plist */,
 			);
 			name = "Supporting Files";
