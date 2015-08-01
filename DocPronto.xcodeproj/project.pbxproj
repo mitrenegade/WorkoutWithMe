@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC7909341B6C455F00085FB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7909331B6C455F00085FB6 /* AppDelegate.swift */; };
+		AC7909371B6C455F00085FB6 /* DocPronto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC7909351B6C455F00085FB6 /* DocPronto.xcdatamodeld */; };
+		AC7909391B6C455F00085FB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7909381B6C455F00085FB6 /* ViewController.swift */; };
+		AC79093C1B6C455F00085FB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC79093A1B6C455F00085FB6 /* Main.storyboard */; };
+		AC79093E1B6C455F00085FB6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC79093D1B6C455F00085FB6 /* Images.xcassets */; };
+		AC7909411B6C455F00085FB6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC79093F1B6C455F00085FB6 /* LaunchScreen.xib */; };
+		AC79094D1B6C455F00085FB6 /* DocProntoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC79094C1B6C455F00085FB6 /* DocProntoTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC7909471B6C455F00085FB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC7909261B6C455F00085FB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC79092D1B6C455F00085FB6;
+			remoteInfo = DocPronto;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC79092E1B6C455F00085FB6 /* DocPronto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocPronto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC7909321B6C455F00085FB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC7909331B6C455F00085FB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC7909361B6C455F00085FB6 /* DocPronto.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DocPronto.xcdatamodel; sourceTree = "<group>"; };
+		AC7909381B6C455F00085FB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC79093B1B6C455F00085FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC79093D1B6C455F00085FB6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AC7909401B6C455F00085FB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AC7909461B6C455F00085FB6 /* DocProntoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DocProntoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC79094B1B6C455F00085FB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC79094C1B6C455F00085FB6 /* DocProntoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocProntoTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC79092B1B6C455F00085FB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC7909431B6C455F00085FB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC7909251B6C455F00085FB6 = {
+			isa = PBXGroup;
+			children = (
+				AC7909301B6C455F00085FB6 /* DocPronto */,
+				AC7909491B6C455F00085FB6 /* DocProntoTests */,
+				AC79092F1B6C455F00085FB6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC79092F1B6C455F00085FB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC79092E1B6C455F00085FB6 /* DocPronto.app */,
+				AC7909461B6C455F00085FB6 /* DocProntoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC7909301B6C455F00085FB6 /* DocPronto */ = {
+			isa = PBXGroup;
+			children = (
+				AC7909331B6C455F00085FB6 /* AppDelegate.swift */,
+				AC7909381B6C455F00085FB6 /* ViewController.swift */,
+				AC79093A1B6C455F00085FB6 /* Main.storyboard */,
+				AC79093D1B6C455F00085FB6 /* Images.xcassets */,
+				AC79093F1B6C455F00085FB6 /* LaunchScreen.xib */,
+				AC7909351B6C455F00085FB6 /* DocPronto.xcdatamodeld */,
+				AC7909311B6C455F00085FB6 /* Supporting Files */,
+			);
+			path = DocPronto;
+			sourceTree = "<group>";
+		};
+		AC7909311B6C455F00085FB6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC7909321B6C455F00085FB6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC7909491B6C455F00085FB6 /* DocProntoTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC79094C1B6C455F00085FB6 /* DocProntoTests.swift */,
+				AC79094A1B6C455F00085FB6 /* Supporting Files */,
+			);
+			path = DocProntoTests;
+			sourceTree = "<group>";
+		};
+		AC79094A1B6C455F00085FB6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC79094B1B6C455F00085FB6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC79092D1B6C455F00085FB6 /* DocPronto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC7909501B6C455F00085FB6 /* Build configuration list for PBXNativeTarget "DocPronto" */;
+			buildPhases = (
+				AC79092A1B6C455F00085FB6 /* Sources */,
+				AC79092B1B6C455F00085FB6 /* Frameworks */,
+				AC79092C1B6C455F00085FB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DocPronto;
+			productName = DocPronto;
+			productReference = AC79092E1B6C455F00085FB6 /* DocPronto.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC7909451B6C455F00085FB6 /* DocProntoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC7909531B6C455F00085FB6 /* Build configuration list for PBXNativeTarget "DocProntoTests" */;
+			buildPhases = (
+				AC7909421B6C455F00085FB6 /* Sources */,
+				AC7909431B6C455F00085FB6 /* Frameworks */,
+				AC7909441B6C455F00085FB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC7909481B6C455F00085FB6 /* PBXTargetDependency */,
+			);
+			name = DocProntoTests;
+			productName = DocProntoTests;
+			productReference = AC7909461B6C455F00085FB6 /* DocProntoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC7909261B6C455F00085FB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Bobby Ren";
+				TargetAttributes = {
+					AC79092D1B6C455F00085FB6 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					AC7909451B6C455F00085FB6 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = AC79092D1B6C455F00085FB6;
+					};
+				};
+			};
+			buildConfigurationList = AC7909291B6C455F00085FB6 /* Build configuration list for PBXProject "DocPronto" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC7909251B6C455F00085FB6;
+			productRefGroup = AC79092F1B6C455F00085FB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC79092D1B6C455F00085FB6 /* DocPronto */,
+				AC7909451B6C455F00085FB6 /* DocProntoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC79092C1B6C455F00085FB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC79093C1B6C455F00085FB6 /* Main.storyboard in Resources */,
+				AC7909411B6C455F00085FB6 /* LaunchScreen.xib in Resources */,
+				AC79093E1B6C455F00085FB6 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC7909441B6C455F00085FB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC79092A1B6C455F00085FB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC7909391B6C455F00085FB6 /* ViewController.swift in Sources */,
+				AC7909371B6C455F00085FB6 /* DocPronto.xcdatamodeld in Sources */,
+				AC7909341B6C455F00085FB6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC7909421B6C455F00085FB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC79094D1B6C455F00085FB6 /* DocProntoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC7909481B6C455F00085FB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC79092D1B6C455F00085FB6 /* DocPronto */;
+			targetProxy = AC7909471B6C455F00085FB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC79093A1B6C455F00085FB6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC79093B1B6C455F00085FB6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC79093F1B6C455F00085FB6 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC7909401B6C455F00085FB6 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC79094E1B6C455F00085FB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC79094F1B6C455F00085FB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC7909511B6C455F00085FB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DocPronto/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AC7909521B6C455F00085FB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DocPronto/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AC7909541B6C455F00085FB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DocProntoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DocPronto.app/DocPronto";
+			};
+			name = Debug;
+		};
+		AC7909551B6C455F00085FB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DocProntoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DocPronto.app/DocPronto";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC7909291B6C455F00085FB6 /* Build configuration list for PBXProject "DocPronto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC79094E1B6C455F00085FB6 /* Debug */,
+				AC79094F1B6C455F00085FB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC7909501B6C455F00085FB6 /* Build configuration list for PBXNativeTarget "DocPronto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC7909511B6C455F00085FB6 /* Debug */,
+				AC7909521B6C455F00085FB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AC7909531B6C455F00085FB6 /* Build configuration list for PBXNativeTarget "DocProntoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC7909541B6C455F00085FB6 /* Debug */,
+				AC7909551B6C455F00085FB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC7909351B6C455F00085FB6 /* DocPronto.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC7909361B6C455F00085FB6 /* DocPronto.xcdatamodel */,
+			);
+			currentVersion = AC7909361B6C455F00085FB6 /* DocPronto.xcdatamodel */;
+			path = DocPronto.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AC7909261B6C455F00085FB6 /* Project object */;
+}
