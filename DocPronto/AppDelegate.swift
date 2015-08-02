@@ -121,6 +121,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func didLogin() {
+        let controller: UIViewController  = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! UIViewController
+        self.window!.rootViewController = controller
+    }
 
 }
 
