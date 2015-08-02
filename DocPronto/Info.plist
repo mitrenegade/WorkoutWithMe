@@ -36,6 +36,10 @@
 	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>DocPronto needs to use your location to find you a doctor.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>DocPronto needs to use your location to find you a doctor.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
