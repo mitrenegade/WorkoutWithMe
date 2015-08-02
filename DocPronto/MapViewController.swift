@@ -111,6 +111,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
         var address: String = "\(self.inputStreet.text) \(self.inputCity.text)"
         println("address: \(address)")
         
+        self.view.endEditing(true)
+        
         let coder = CLGeocoder()
         coder.geocodeAddressString(address, completionHandler: { (results, error) -> Void in
             if error != nil {
