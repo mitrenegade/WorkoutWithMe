@@ -9,10 +9,12 @@
 import UIKit
 import GoogleMaps
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
 
     @IBOutlet var mapView: GMSMapView!
     let locationManager = CLLocationManager()
+    var iconImage: UIImage?
+    var currentLocation: CLLocation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         else {
             locationManager.startUpdatingLocation()
         }
+        
+        self.iconImage = UIImage(named: "iconLocation")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,15 +56,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         if let location = locations.first as? CLLocation {
             mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 17, bearing: 0, viewingAngle: 0)
             locationManager.stopUpdatingLocation()
-
-            var marker = GMSMarker()
-            marker.position = locationManager.location.coordinate
-            marker.title = "My location"
-            marker.snippet = "I need a doc pronto"
-            marker.map = mapView
+            
+            self.currentLocation = location
         }
     }
 
+    // MARK: - GMSMapView  delegate
+    func didTapMyLocationButtonForMapView(mapView: GMSMapView!) -> Bool {
+        self.view.endEditing(true)
+
+        println("mylocation")
+        return false
+    }
+    
+    func mapView(mapView: GMSMapView!, idleAtCameraPosition position: GMSCameraPosition!) {
+        self.currentLocation = CLLocation(latitude: position.target.latitude, longitude: position.target.longitude)
+    }
     
     /*
     // MARK: - Navigation
