@@ -30,10 +30,11 @@
 		AC79097A1B6D517E00085FB6 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7909791B6D517E00085FB6 /* Social.framework */; };
 		AC79097E1B6D549700085FB6 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79097C1B6D549700085FB6 /* Fabric.framework */; };
 		AC79097F1B6D549700085FB6 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC79097D1B6D549700085FB6 /* Crashlytics.framework */; };
-		AC7909851B6D710900085FB6 /* Login.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7909841B6D710900085FB6 /* Login.Storyboard */; };
-		ACA6B8ED1B6E4F0600AAA992 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA6B8EC1B6E4F0600AAA992 /* LoginViewController.swift */; };
 		AC7909811B6D5D7000085FB6 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7909801B6D5D7000085FB6 /* Map.storyboard */; };
 		AC7909831B6D618C00085FB6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7909821B6D618C00085FB6 /* MapViewController.swift */; };
+		AC7909851B6D710900085FB6 /* Login.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7909841B6D710900085FB6 /* Login.Storyboard */; };
+		ACA6B8ED1B6E4F0600AAA992 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA6B8EC1B6E4F0600AAA992 /* LoginViewController.swift */; };
+		ACA6B8EF1B6E62B800AAA992 /* VisitRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA6B8EE1B6E62B800AAA992 /* VisitRequestViewController.swift */; };
 		E84A72A6D85BF4E26410543A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEEAF65A38F5FAC21F6B91A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -77,10 +78,11 @@
 		AC7909791B6D517E00085FB6 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		AC79097C1B6D549700085FB6 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		AC79097D1B6D549700085FB6 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		AC7909841B6D710900085FB6 /* Login.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.Storyboard; sourceTree = "<group>"; };
-		ACA6B8EC1B6E4F0600AAA992 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AC7909801B6D5D7000085FB6 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		AC7909821B6D618C00085FB6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AC7909841B6D710900085FB6 /* Login.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.Storyboard; sourceTree = "<group>"; };
+		ACA6B8EC1B6E4F0600AAA992 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ACA6B8EE1B6E62B800AAA992 /* VisitRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitRequestViewController.swift; sourceTree = "<group>"; };
 		C5FF6A4040152AFBAF0CF503 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +184,7 @@
 				AC7909841B6D710900085FB6 /* Login.Storyboard */,
 				AC7909821B6D618C00085FB6 /* MapViewController.swift */,
 				AC79093A1B6C455F00085FB6 /* Main.storyboard */,
+				ACA6B8EE1B6E62B800AAA992 /* VisitRequestViewController.swift */,
 				AC79093F1B6C455F00085FB6 /* LaunchScreen.xib */,
 				AC7909351B6C455F00085FB6 /* DocPronto.xcdatamodeld */,
 				AC7909311B6C455F00085FB6 /* Supporting Files */,
@@ -370,6 +373,7 @@
 				AC7909391B6C455F00085FB6 /* ViewController.swift in Sources */,
 				AC7909371B6C455F00085FB6 /* DocPronto.xcdatamodeld in Sources */,
 				AC7909341B6C455F00085FB6 /* AppDelegate.swift in Sources */,
+				ACA6B8EF1B6E62B800AAA992 /* VisitRequestViewController.swift in Sources */,
 				AC7909831B6D618C00085FB6 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

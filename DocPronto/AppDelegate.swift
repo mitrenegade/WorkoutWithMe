@@ -32,6 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // google maps
         GMSServices.provideAPIKey("AIzaSyDjj-mmJxrtTSIp7nVgSRi911_LTL8obYY")
+        
+        if (PFUser.currentUser() != nil) {
+            self.didLogin()
+        }
+        else {
+            self.goToLogin()
+        }
         return true
     }
 
@@ -124,6 +131,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func didLogin() {
         let controller: UIViewController  = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! UIViewController
+        self.window!.rootViewController = controller
+    }
+    
+    func goToLogin() {
+        let controller: UIViewController  = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController() as! UIViewController
         self.window!.rootViewController = controller
     }
 
