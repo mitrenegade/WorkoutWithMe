@@ -167,15 +167,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxs-j6-BaT" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="414"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="delegate" destination="vMU-jC-vAT" id="JDN-DH-65a"/>
-                                </connections>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rz8-Ed-b4l">
-                                <rect key="frame" x="0.0" y="414" width="600" height="122"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="122"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City, State or Zip" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FPW-So-GaS">
                                         <rect key="frame" x="8" y="46" width="584" height="30"/>
@@ -184,6 +177,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="vMU-jC-vAT" id="aKk-Qr-tcR"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tY-b7-GaX">
                                         <rect key="frame" x="8" y="84" width="584" height="30"/>
@@ -195,6 +191,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didClickSearch:" destination="vMU-jC-vAT" eventType="touchUpInside" id="g4E-rD-g3g"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mnq-Co-r3V">
                                         <rect key="frame" x="8" y="8" width="584" height="30"/>
@@ -203,6 +202,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="vMU-jC-vAT" id="5Mt-Da-SMl"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -220,22 +222,41 @@
                                     <constraint firstAttribute="trailing" secondItem="3tY-b7-GaX" secondAttribute="trailing" constant="8" id="v2K-pE-eeC"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxs-j6-BaT" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="122" width="600" height="414"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="iconLocation" translatesAutoresizingMaskIntoConstraints="NO" id="Ur2-dI-fzM">
+                                        <rect key="frame" x="287" y="194" width="26" height="26"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="Ur2-dI-fzM" secondAttribute="centerX" id="4dB-7e-LsU"/>
+                                    <constraint firstAttribute="centerY" secondItem="Ur2-dI-fzM" secondAttribute="centerY" id="qvE-tK-Rmh"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="vMU-jC-vAT" id="JDN-DH-65a"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="qxs-j6-BaT" secondAttribute="trailing" constant="-16" id="0mP-LM-geO"/>
+                            <constraint firstItem="SgZ-b9-HbK" firstAttribute="top" secondItem="qxs-j6-BaT" secondAttribute="bottom" id="7VZ-qR-reb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Rz8-Ed-b4l" secondAttribute="trailing" constant="-16" id="Gxa-6Q-jb3"/>
+                            <constraint firstItem="Rz8-Ed-b4l" firstAttribute="top" secondItem="GKG-Os-T6L" secondAttribute="bottom" id="OSi-gD-YxS"/>
                             <constraint firstItem="Rz8-Ed-b4l" firstAttribute="leading" secondItem="KXf-9E-Po8" secondAttribute="leadingMargin" constant="-16" id="Sqx-UT-spl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qxs-j6-BaT" secondAttribute="trailing" constant="-16" id="Zqt-mu-wCl"/>
-                            <constraint firstItem="qxs-j6-BaT" firstAttribute="top" secondItem="GKG-Os-T6L" secondAttribute="bottom" id="eQt-QN-7ZY"/>
-                            <constraint firstItem="Rz8-Ed-b4l" firstAttribute="top" secondItem="qxs-j6-BaT" secondAttribute="bottom" id="gih-1W-j3M"/>
-                            <constraint firstItem="qxs-j6-BaT" firstAttribute="leading" secondItem="KXf-9E-Po8" secondAttribute="leadingMargin" constant="-16" id="x1Y-ix-418"/>
-                            <constraint firstItem="SgZ-b9-HbK" firstAttribute="top" secondItem="Rz8-Ed-b4l" secondAttribute="bottom" id="ytN-Wa-Nc8"/>
+                            <constraint firstItem="qxs-j6-BaT" firstAttribute="top" secondItem="Rz8-Ed-b4l" secondAttribute="bottom" id="gyC-0d-RMk"/>
+                            <constraint firstItem="qxs-j6-BaT" firstAttribute="leading" secondItem="KXf-9E-Po8" secondAttribute="leadingMargin" constant="-16" id="zbD-AM-lwc"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="gnu-Jp-UmR"/>
                     <connections>
+                        <outlet property="inputCity" destination="FPW-So-GaS" id="NWC-Xr-hpU"/>
+                        <outlet property="inputStreet" destination="mnq-Co-r3V" id="Icn-4p-yQ0"/>
                         <outlet property="mapView" destination="qxs-j6-BaT" id="nfw-F3-OnU"/>
+                        <outlet property="viewAddress" destination="Rz8-Ed-b4l" id="9ax-wB-DMy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f5h-ee-x57" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -245,5 +266,6 @@
     </scenes>
     <resources>
         <image name="iconAlert" width="60" height="60"/>
+        <image name="iconLocation" width="26" height="26"/>
     </resources>
 </document>
