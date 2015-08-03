@@ -141,5 +141,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.rootViewController = controller
     }
 
+    func logout() {
+        PFUser.logOutInBackgroundWithBlock { (error) -> Void in
+            self.goToLogin()
+        }
+    }
 }
 
