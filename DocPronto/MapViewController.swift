@@ -279,7 +279,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
             if self.requestAlert != nil {
                 self.requestAlert!.dismissViewControllerAnimated(true, completion: nil)
             }
-            self.requestAlert = UIAlertController(title: "A doctor was matched!", message: "You have been matched with a doctor! Expect a in 1 - 3 hours.", preferredStyle: UIAlertControllerStyle.Alert)
+            self.requestAlert = UIAlertController(title: "A doctor was matched!", message: "Expect a call within the next hour from Dr. House.", preferredStyle: UIAlertControllerStyle.Alert)
             self.requestAlert?.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel, handler: { (action) -> Void in
                 self.toggleRequestState(RequestState.NoRequest)
             }))
