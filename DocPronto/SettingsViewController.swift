@@ -70,6 +70,7 @@ class SettingsViewController: UITableViewController {
             self.simpleAlert("About DocPronto", message: message)
             break
         case 1:
+            self.performSegueWithIdentifier("GoToCreditCard", sender: self)
             break;
         case 2:
             appDelegate.logout()

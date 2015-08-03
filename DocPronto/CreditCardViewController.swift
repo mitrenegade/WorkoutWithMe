@@ -9,15 +9,26 @@
 import UIKit
 
 class CreditCardViewController: UIViewController, UITextFieldDelegate {
-    
-    @IBOutlet var inputCreditCard: UILabel!
-    @IBOutlet var inputExpiration: UILabel!
-    @IBOutlet var inputCVV: UILabel!
 
+    @IBOutlet var labelCurrentCard: UILabel!
+    @IBOutlet var inputCreditCard: UITextField!
+    @IBOutlet var inputExpiration: UITextField!
+    @IBOutlet var inputCVV: UITextField!
+
+    var currentCard: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let card: String = NSUserDefaults.standardUserDefaults().objectForKey("creditcard:cached") as? String {
+            self.currentCard = card
+            let last4:String = self.currentCard!.substringFromIndex(advance(card.endIndex, -4))
+            self.labelCurrentCard.text = "Your current credit card is *\(last4)"
+        }
+        else {
+            self.labelCurrentCard.text = "Please enter a new credit card"
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +36,29 @@ class CreditCardViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        if textField == self.inputCreditCard {
+            if count(textField.text) != 16 {
+                self.simpleAlert("Invalid credit card number", message: "Please make sure you enter the credit card number correctly")
+                self.inputCreditCard.becomeFirstResponder()
+            }
+            else {
+                NSUserDefaults.standardUserDefaults().setObject(self.inputCreditCard.text, forKey: "creditcard:cached")
+            }
+        }
+    }
+    
+    func simpleAlert(title: String?, message: String?) {
+        var alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
