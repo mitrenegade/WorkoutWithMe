@@ -62,12 +62,14 @@ class VisitRequestViewController: UITableViewController {
             
             switch indexPath.row {
             case 0:
-                icon.image = UIImage(named: "iconPill")
+                icon.image = UIImage(named: "iconPill")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+                icon.tintColor = UIColor(red: 215.0/255.0, green: 84.0/255.0, blue: 82.0/255.0, alpha: 1)
                 labelTitle.text = "Sickness or injury"
                 labelDetails.text = "See a doctor for a sickness, illness or malady"
                 break
             case 1:
-                icon.image = UIImage(named: "iconStethoscope")
+                icon.image = UIImage(named: "iconStethoscope")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+                icon.tintColor = UIColor(red: 55/255.0, green: 123/255.0, blue: 181/255.0, alpha: 1)
                 labelTitle.text = "Physical"
                 labelDetails.text = "See a doctor for a physical exam or checkup"
                 break
