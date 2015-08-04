@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wlb-dc-wnb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -466,14 +467,192 @@
                         <outlet property="inputStreet" destination="mnq-Co-r3V" id="Icn-4p-yQ0"/>
                         <outlet property="mapView" destination="qxs-j6-BaT" id="nfw-F3-OnU"/>
                         <outlet property="viewAddress" destination="Rz8-Ed-b4l" id="9ax-wB-DMy"/>
+                        <segue destination="8hA-p3-zea" kind="show" identifier="GoToViewDoctor" id="NR1-Qe-m5e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f5h-ee-x57" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2816" y="-209"/>
         </scene>
+        <!--Doctor Profile View Controller-->
+        <scene sceneID="YtA-Lk-sRN">
+            <objects>
+                <viewController id="8hA-p3-zea" customClass="DoctorProfileViewController" customModule="DocPronto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aon-da-1jN"/>
+                        <viewControllerLayoutGuide type="bottom" id="VAu-aT-buD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O2g-Bs-KtS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DocKlein" translatesAutoresizingMaskIntoConstraints="NO" id="HDq-mK-ZWI">
+                                <rect key="frame" x="200" y="44" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="16l-dr-jKf"/>
+                                    <constraint firstAttribute="width" secondItem="HDq-mK-ZWI" secondAttribute="height" multiplier="1:1" id="b0X-9M-rBW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meet Doctor Klein!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7r-pv-MK3">
+                                <rect key="frame" x="16" y="252" width="568" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="LLc-uZ-oxV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLz-XP-zfb">
+                                <rect key="frame" x="16" y="311" width="568" height="40"/>
+                                <color key="backgroundColor" red="0.84313725490000002" green="0.3294117647" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Kjm-Tc-mQj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Contact Doctor">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickButton:" destination="8hA-p3-zea" eventType="touchUpInside" id="deb-SW-Hx1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85W-j6-3pP">
+                                <rect key="frame" x="200" y="359.5" width="200" height="132.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="NCT-29-Wu2"/>
+                                    <constraint firstAttribute="height" priority="950" constant="132.5" id="uez-Py-eOL"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Credentials: ">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <font key="NSOriginalFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="MD">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Specialty: ">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Emergency Medicine
+</string>
+                                        <attributes>
+                                            <color key="NSBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Estimated Time of Arrival: ">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <font key="NSOriginalFont" size="16" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="NOW">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <integer key="NSLigature" value="0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="26.450000762939453"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F7r-pv-MK3" firstAttribute="top" secondItem="HDq-mK-ZWI" secondAttribute="bottom" constant="8" id="AlH-v3-ha8"/>
+                            <constraint firstItem="CLz-XP-zfb" firstAttribute="trailing" secondItem="O2g-Bs-KtS" secondAttribute="trailingMargin" id="Co5-if-AcP"/>
+                            <constraint firstItem="CLz-XP-zfb" firstAttribute="leading" secondItem="O2g-Bs-KtS" secondAttribute="leadingMargin" id="DW6-uU-6aE"/>
+                            <constraint firstItem="F7r-pv-MK3" firstAttribute="trailing" secondItem="O2g-Bs-KtS" secondAttribute="trailingMargin" id="HG2-n2-3CF"/>
+                            <constraint firstItem="CLz-XP-zfb" firstAttribute="top" secondItem="F7r-pv-MK3" secondAttribute="bottom" constant="8" id="HcX-Y3-cfY"/>
+                            <constraint firstAttribute="centerX" secondItem="F7r-pv-MK3" secondAttribute="centerX" id="VPa-XX-KHt"/>
+                            <constraint firstItem="HDq-mK-ZWI" firstAttribute="top" secondItem="Aon-da-1jN" secondAttribute="bottom" constant="44" id="f2E-wc-U4K"/>
+                            <constraint firstItem="F7r-pv-MK3" firstAttribute="leading" secondItem="O2g-Bs-KtS" secondAttribute="leadingMargin" id="htw-gI-gcO"/>
+                            <constraint firstAttribute="centerX" secondItem="HDq-mK-ZWI" secondAttribute="centerX" id="rLI-Xi-5oj"/>
+                            <constraint firstAttribute="centerX" secondItem="CLz-XP-zfb" secondAttribute="centerX" id="srl-ub-xfs"/>
+                            <constraint firstAttribute="centerX" secondItem="85W-j6-3pP" secondAttribute="centerX" id="vKq-Bh-zua"/>
+                            <constraint firstItem="85W-j6-3pP" firstAttribute="top" secondItem="CLz-XP-zfb" secondAttribute="bottom" constant="8.5" id="xyo-Y0-8mt"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="5wt-Ye-wqY"/>
+                    <connections>
+                        <outlet property="buttonMeet" destination="CLz-XP-zfb" id="6xy-HB-a8L"/>
+                        <outlet property="labelInfo" destination="85W-j6-3pP" id="ucz-VI-Snt"/>
+                        <outlet property="labelName" destination="F7r-pv-MK3" id="h7r-3i-7ot"/>
+                        <outlet property="photoView" destination="HDq-mK-ZWI" id="tYd-bu-chP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uD7-bO-ERn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3589" y="-203"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="DocKlein" width="450" height="450"/>
         <image name="iconAlert" width="60" height="60"/>
         <image name="iconChecklist" width="30" height="30"/>
         <image name="iconDoctor" width="30" height="30"/>

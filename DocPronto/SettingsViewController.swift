@@ -36,7 +36,7 @@ class SettingsViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 3
+        return 4
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -50,6 +50,8 @@ class SettingsViewController: UITableViewController {
         case 1:
             cell.textLabel!.text = "Update your credit card"
         case 2:
+            cell.textLabel!.text = "Insurance"
+        case 3:
             cell.textLabel!.text = "Logout"
         default:
             break
@@ -72,7 +74,7 @@ class SettingsViewController: UITableViewController {
         case 1:
             self.performSegueWithIdentifier("GoToCreditCard", sender: self)
             break;
-        case 2:
+        case 3:
             appDelegate.logout()
         default:
             break
