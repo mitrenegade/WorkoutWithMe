@@ -32,8 +32,17 @@ class DoctorProfileViewController: UIViewController {
     }
     
     @IBAction func didClickButton(button: UIButton) {
-        
+        self.callDoctor()
     }
+    
+    func callDoctor() {
+        var str = "tel://2403725485"
+        let url = NSURL(string: str) as NSURL?
+        if (url != nil) {
+            UIApplication.sharedApplication().openURL(url!)
+        }
+    }
+
 
     /*
     // MARK: - Navigation
