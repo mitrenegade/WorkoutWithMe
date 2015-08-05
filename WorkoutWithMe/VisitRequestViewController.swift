@@ -1,6 +1,6 @@
 //
 //  VisitRequestViewController.swift
-//  DocPronto
+//  WorkoutWithMe
 //
 //  Created by Bobby Ren on 8/2/15.
 //  Copyright (c) 2015 Bobby Ren. All rights reserved.
