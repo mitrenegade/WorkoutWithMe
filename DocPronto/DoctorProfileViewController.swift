@@ -36,7 +36,7 @@ class DoctorProfileViewController: UIViewController {
     }
     
     func callDoctor() {
-        var str = "tel://2403725485"
+        var str = "tel://6174290196"
         let url = NSURL(string: str) as NSURL?
         if (url != nil) {
             UIApplication.sharedApplication().openURL(url!)
